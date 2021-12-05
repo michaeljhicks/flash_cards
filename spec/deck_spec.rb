@@ -17,4 +17,8 @@ RSpec.describe Deck do
     expect(@deck).to be_an_instance_of Deck
   end
 
+  it "#count" do
+    expect(@deck.count).to eq 3
+  end
+
 end
