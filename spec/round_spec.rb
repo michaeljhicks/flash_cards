@@ -24,10 +24,12 @@ RSpec.describe Round do
 
   it "turns empty" do
     expect(@round.turns).to eq([])
-
   end
 
+  it "current card" do
+    expect(@round.current_card).to eq(@card_1)
 
+  end
 
 
 end
