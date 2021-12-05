@@ -18,5 +18,16 @@ RSpec.describe Round do
     expect(@round).to be_an_instance_of(Round)
   end
 
+  it "has deck" do
+    expect(@round.deck).to eq(@deck)
+  end
+
+  it "turns empty" do
+    expect(@round.turns).to eq([])
+
+  end
+
+
+
 
 end
