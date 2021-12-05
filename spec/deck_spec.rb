@@ -29,6 +29,9 @@ RSpec.describe Deck do
     expect(@deck.cards_in_category(:Geography)).to eq ([@card_1])
   end
 
-  
+  it "#cards_in_category - Pop Culture" do
+    expect(@deck.cards_in_category("Pop Culture")).to be_empty()
+
+  end
 
 end
