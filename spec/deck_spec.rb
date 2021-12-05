@@ -17,8 +17,17 @@ RSpec.describe Deck do
     expect(@deck).to be_an_instance_of Deck
   end
 
-  it "#count" do
+  it "#counts" do
     expect(@deck.count).to eq 3
   end
+
+  it "cards_in_category - :STEM" do
+    expect(@deck.cards_in_category(:STEM)).to eq([@card_2, @card_3])
+  end
+
+  # it "text" do
+  #
+  # end
+
 
 end
