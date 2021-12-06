@@ -40,5 +40,10 @@ class Round
     correct_turns.length
   end
 
+  def percent_correct
+    number_correct.to_f / @turns.length.to_f * 100 #.to_f --> leading characters in a str as a floating point
+  end
+
+
 
 end

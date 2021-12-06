@@ -86,7 +86,18 @@ RSpec.describe 'new turn' do
   it "#number correct by category - :Geography" do
     new_turn_2 = @round.take_turn("Venus")
     expect(@round.number_correct_by_category(:Geography)).to eq(1)
-
   end
+
+  it "#number correct by category - :STEM" do
+    new_turn_2 = @round.take_turn("Venus")
+    expect(@round.number_correct_by_category(:STEM)).to eq(0)
+  end
+
+  it "#percent correct" do
+    new_turn_2 = @round.take_turn("Venus")
+    expect(@round.percent_correct).to eq(50.0)
+  end
+
+
 
 end
