@@ -30,7 +30,15 @@ class Round
     correct_turns.length # Review
   end
 
-
+  def number_correct_by_category(category)
+    correct_turns = []
+    @turns.each do |turn|
+      if turn.correct? && turn.card.category == category
+        correct_turns << turn
+      end
+    end
+    correct_turns.length
+  end
 
 
 end
