@@ -98,6 +98,15 @@ RSpec.describe 'new turn' do
     expect(@round.percent_correct).to eq(50.0)
   end
 
+  it "#percent correct by category" do
+    new_turn_2 = @round.take_turn("Venus")
+    expect(@round.percent_correct_by_category(:Geography)).to eq(100.0)
+  end
 
+  it "#current card" do
+    new_turn_2 = @round.take_turn("Venus")
+    expect(@round.current_card).to eq(@card_3)
+
+  end
 
 end

@@ -41,9 +41,13 @@ class Round
   end
 
   def percent_correct
-    number_correct.to_f / @turns.length.to_f * 100 #.to_f --> leading characters in a str as a floating point
+    return number_correct.to_f / @turns.length.to_f * 100 #.to_f --> leading characters in a str as a floating point
   end
 
-
-
+  def percent_correct_by_category(category)
+    category_count = @turns.count do |turn|
+      turn.card.category == category
+    end
+    (number_correct_by_category(category).to_f / category_count.to_f * 100).round #.to_f --> leading characters in a str as a floating point
+  end
 end
