@@ -1,4 +1,4 @@
-require './lib/card'
+require './lib/card.rb'
 
 RSpec.describe Card do
   it 'exists' do
@@ -18,7 +18,7 @@ RSpec.describe Card do
 
     expect(card.answer).to eq("Juneau")
   end
-  
+
   it 'has a category' do
     card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
 
