@@ -60,4 +60,9 @@ RSpec.describe 'new turn' do
     expect(@round.turns).to eq([@new_turn_1])
   end
 
+  it "#number correct" do
+    expect(@round.number_correct).to eq(1)
+  end
+
+
 end

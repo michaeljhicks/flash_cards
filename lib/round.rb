@@ -20,5 +20,14 @@ class Round
     @turns.last #we're looking for the method to return on line 52 spec
   end
 
+  def number_correct
+    correct_turns =[]
+    @turns.each do |turn|
+      if turn.correct?
+        correct_turns << turn
+      end
+    end
+    correct_turns.length # Review you idiot
+  end
 
 end
