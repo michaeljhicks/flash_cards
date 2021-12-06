@@ -73,6 +73,11 @@ RSpec.describe 'new turn' do
     expect(@round.turns.count).to eq(2)
   end
 
+  it "#turns last feedback" do
+    new_turn_2 = @round.take_turn("Venus")
+    expect(@round.turns.last).to eq(new_turn_2)
+  end
+
 
 
 end
