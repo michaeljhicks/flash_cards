@@ -14,9 +14,11 @@ class Round
     return @deck.cards.first
   end
 
-  # def method_name
-  #
-  # end
+  def take_turn(guess)
+    @turns.push Turn.new(guess, current_card)
+    @deck.cards.rotate! #bang required because next time turn is taken, deck is reset to it's original state
+    @turns.last #we're looking for the method to return on line 52 spec
+  end
 
 
 end
