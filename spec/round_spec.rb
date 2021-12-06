@@ -64,5 +64,15 @@ RSpec.describe 'new turn' do
     expect(@round.number_correct).to eq(1)
   end
 
+  it "#current card" do
+    expect(@round.current_card).to eq(@card_2) #object ID ...e90 -->
+  end
+
+  it "#take turn" do
+    new_turn_2 = @round.take_turn("Venus") #
+    expect(@round.turns.count).to eq(2)
+  end
+
+
 
 end

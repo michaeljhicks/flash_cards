@@ -27,7 +27,10 @@ class Round
         correct_turns << turn
       end
     end
-    correct_turns.length # Review you idiot
+    correct_turns.length # Review
   end
+
+
+
 
 end
